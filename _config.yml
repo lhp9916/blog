@@ -5,9 +5,9 @@
 # Site
 title: lhp's Corner
 subtitle:
-description:
+description: 学会做一个“优雅”的程序员
 author: liuhaipeng
-language: zh_CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
