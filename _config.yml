@@ -71,3 +71,14 @@ deploy:
   type: git
   repo: git@github.com:lhp9916/lhp9916.github.io.git
   branch: master
+
+social:
+  Github: https://github.com/lhp9916
+  Weibo: http://weibo.com/lhp9916
+
+social_icons:
+  enable: true
+  # Icon Mappings.
+  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
+  GitHub: github
+  Weibo: weibo
