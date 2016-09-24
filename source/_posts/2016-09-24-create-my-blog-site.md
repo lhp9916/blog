@@ -38,7 +38,7 @@ hexo server     //启动一个本地服务器
 ### 写作
 你可以执行下列命令来创建一篇新文章。
 ```
-$ hexo new  <title>
+hexo new  <title>
 ```
 执行后会在source/_posts目录下生成一个.md文件，打开就可以输入你想输入的内容。
 
@@ -52,7 +52,7 @@ deploy:
 注意，把 yourname 改成你的 Github 用户名。(对了，采用git方式部署，你必须事先在github上添加你的SSH key.)
 当然你需要安装hexo-deployer-git这个部署工具。
 ```
-$ npm install hexo-deployer-git --save
+npm install hexo-deployer-git --save
 ```
 现在是最后一步了，在命令行里依次输入：
 ```
