@@ -83,4 +83,11 @@ social_icons:
   GitHub: github
   Weibo: weibo
 
+# 多说评论
 duoshuo_shortname: lhp9916
+
+# JiaThis 分享服务
+jiathis: true
+
+# 站点建立时间
+since: 2016
