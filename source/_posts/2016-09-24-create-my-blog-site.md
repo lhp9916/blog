@@ -9,7 +9,7 @@ tags:
 
 ### 在 Github 上创建一个 Repo
 在浏览器中登录 Github，创建一个 Repo，名称格式为 yourname.github.io。比如，我个人的 Github 账户用户名是 lhp9916，所以，我的这个 Repo 的名称就是 lhp9916.github.io。这里是Github官方的pages服务介绍 [pages.github.com](https://pages.github.com/)可以参考一下。
-
+<!-- more -->
 ### 安装Hexo
 首先确认本地已经安装好了git和npm。npm是nodejs的一个包管理工具，nodejs安装时会自动安装npm。
 ```
