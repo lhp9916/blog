@@ -34,6 +34,7 @@ menu:
   archives: /archives
   #tags: /tags
   #commonweal: /404.html
+  about : /resume.html
 
 
 # Enable/Disable menu icons.
