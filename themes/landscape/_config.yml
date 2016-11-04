@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+  About: resume.html
 rss: /atom.xml
 
 # Content
