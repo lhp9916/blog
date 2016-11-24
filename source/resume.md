@@ -13,7 +13,7 @@ tags:
 * 教育经历：长江大学计算机应用技术专业(2012.09-2015.06)
 * 邮箱：lhp9916@gmail.com
 * GitHub：https://github.com/lhp9916
-* 个人网站：http://liuhaipeng.top/
+* 个人网站：https://lhp9916.github.io/
 * 网络ID： lhp9916
 
 ### 工作经历
