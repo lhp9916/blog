@@ -2,6 +2,7 @@
 title: 简历
 date: 2016-10-29 18:17:56
 tags:
+comments: false
 ---
 ## 刘海朋的简历
 
