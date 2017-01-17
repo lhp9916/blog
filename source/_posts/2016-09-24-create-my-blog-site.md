@@ -2,6 +2,7 @@
 title: Hexo+Github Pages建立博客站点
 date: 2016-09-24 21:34:59
 tags:
+categories: 技术分享
 ---
 
 ### 开始之前

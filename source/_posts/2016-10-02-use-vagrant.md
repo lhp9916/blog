@@ -2,13 +2,14 @@
 title: Vagrant使用
 date: 2016-10-02 00:38:20
 tags:
+categories: 技术分享
 ---
 
 ### 初始化安装
 做web开发的一定都用过虚拟机，以前安装一套新系统要去Ubuntu官网下载一个镜像文件，然后新建一个vitualbox虚拟机，然后需要有人值守的去完成整个系统安装过程，很是繁琐。但用了 Vagrant 以后这个过程变成无人值守的了，意思就是一个命令搞定一切。过程是这样：
 
 首先，保证我的系统上有两个基础软件，一个是 vagrant 一个就是 virtualbox ，安装过程就是双击然后下一步下一步而已，没啥好说的。装好之后，到命令行中就有 vagrant 这个命令了。那么这个时候是不是就要去下载系统光盘了呢？ NO，有一个网站叫做https://vagrantcloud.com/ ，到上面搜一下 ubuntu，排名第一的这个 ubuntu / trusty64 就是 ubuntu 公司提供的 ubuntu 14.04 的64位系统镜像文件。<!-- more -->
-新建一个目录，执行 
+新建一个目录，执行
 ```
 vagrant init
 mkdir myproject
@@ -30,7 +31,7 @@ config.vm.provider "virtualbox"do |v|
 end
 这样运行 vagrant reload 就修改成功了。
 
-**创建新用户** 
+**创建新用户**
 vagrant ssh 登陆进来的用户名是 vagrant，这个用户挺好，执行 sudo 是不需要输入密码的，开发中实际使用挺好用的。不过如果我非要创建自己的用户也是可以的。
 sudo adduser lhp --ingroup sudo
 如何用这个用户的身份来登录呢？运行 vagrant up 的时候，可以看到有输出

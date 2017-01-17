@@ -2,6 +2,7 @@
 title: Hexo换主题，域名绑定
 date: 2016-09-25 22:09:54
 tags:
+categories: 技术分享
 ---
 
 ### why Hexo ?

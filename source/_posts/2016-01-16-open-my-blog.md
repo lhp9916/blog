@@ -1,5 +1,6 @@
 ---
 title: open my blog
+categories: 生活的足迹
 ---
 
 ### 写在前面
