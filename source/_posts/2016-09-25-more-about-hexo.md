@@ -30,9 +30,9 @@ hexo s
 ### 绑定个人域名
 你可以通过yourname.github.io来访问你的博客，还可以绑定你的域名。如果你没有可以先到[万网](https://wanwang.aliyun.com/)上注册一个，.top的域名最便宜，首年才2块钱。
 我注册了一个域名liuhaipeng.top，接下来去控制台->域名->解析，添加这么一条记录。
-![](/images/20160925/yuming.jpg)
+![](https://lhp9916.github.io/images/20160925/yuming.jpg)
 然后在source目录下添加一个名为CNAME的文件，文件里面写入注册好的域名。
-![](/images/20160925/cname.jpg)
+![](https://lhp9916.github.io/images/20160925/cname.jpg)
 最后，把项目部署到github上，那么你就可以通过你注册的域名来访问你的博客网站。
 
 ### hexo常用命令及简写
