@@ -2,7 +2,7 @@
 title: 切换国内“源”
 date: 2017-03-08 22:03:27
 tags:
-categories: 技术分享
+categories: 笔记本
 ---
 
 ### 切换 Node 源

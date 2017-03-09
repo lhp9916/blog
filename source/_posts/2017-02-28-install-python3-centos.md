@@ -2,7 +2,7 @@
 title: CentOS 安装 Python3 笔记
 date: 2017-02-28 21:07:10
 tags:
-categories: 技术分享
+categories: 笔记本
 ---
 
 最近有时间就学习了 python ，写一下笔记。
