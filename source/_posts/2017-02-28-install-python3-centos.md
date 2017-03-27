@@ -37,7 +37,7 @@ make all
 make install
 ```
 等待安装完成：
-![](https://lhp9916.github.io/images/20170228/install-success.jpg)
+![](http://oncsg1snd.bkt.clouddn.com/images/20170228/install-success.jpg)
 
 ### 使用
 #### 添加软链接
@@ -47,9 +47,9 @@ ln -s /usr/local/python3/bin/pip3.6 /usr/local/bin/pip3
 ```
 
 #### 使用 python3 命令
-![](https://lhp9916.github.io/images/20170228/python-version.jpg)
+![](http://oncsg1snd.bkt.clouddn.com/images/20170228/python-version.jpg)
 如上图所示，出现类似的内容，证明python安装成功。
 
 #### pip 使用
 pip 是Python的包管理工具，类似npm、composer。
-![](https://lhp9916.github.io/images/20170228/pip-install.jpg)
+![](http://oncsg1snd.bkt.clouddn.com/images/20170228/pip-install.jpg)
