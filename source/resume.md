@@ -47,3 +47,5 @@ comments: false
 * 熟悉Mysql，能编写sql语句；
 * 熟悉linux常用命令和配置；
 * 熟悉常见PHP开发框架，熟悉Laravel、ThinkPHP；
+
+[简历下载](刘海朋简历.PHP开发工程师.pdf)
