@@ -7,7 +7,7 @@ title: lhp's Corner
 subtitle:
 description: Stay hungry, Stay foolish.
 author: 刘海朋
-language: zh-CN
+language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: indigo
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
