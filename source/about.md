@@ -17,10 +17,9 @@ comments: false
 以下均为我熟练使用的技能
 
 - Web开发：PHP/JavaScript
-- Web框架：ThinkPHP/Laravel/CodeIgniter
-- 前端框架：Bootstrap/Vue.js/jQuery/HTML5
-- 前端工具：Webpack/Gulp
-- 数据库相关：MySQL/PDO/SQLite
+- Web框架：ThinkPHP/Laravel
+- 前端框架：HTML5/Bootstrap/Vue.js/jQuery/Element-UI
+- 数据库相关：MySQL/MariaDB/Redis
 - 版本管理、开发工具：PhpStorm/Git/Composer
 
 名称 | 熟悉程度
