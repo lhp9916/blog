@@ -71,7 +71,6 @@ deploy:
   type: git
   repo:
       github: git@github.com:lhp9916/lhp9916.github.io.git,master
-      # coding: git@git.coding.net:lhp9916/lhp9916.git,master
 
 social:
   Github: https://github.com/lhp9916

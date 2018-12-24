@@ -4,7 +4,7 @@ date: 2018-06-09 11:32:15
 tags:
 ---
 
-## 安装 Docker
+## Docker 安装
 
 ```
 curl -sS https://get.docker.com/ | sh
