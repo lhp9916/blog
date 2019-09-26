@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://lhp9916.github.io
-root: /
+root: /blog/
 permalink: :title/
 permalink_defaults:
 
