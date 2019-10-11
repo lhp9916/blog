@@ -8,7 +8,7 @@ tags:
 首先需要一台安装了 OpenWrt 系统的路由，然后在路由系统中安装 vlmcsd 插件，这是一个开源的 KMS服务器。我使用的是 KoolShare LEDE 固件，LEDE自带软件中心，安装插件很方便。
 
 ## 激活
-#### Windows 激活
+### Windows 激活
 以管理员身份运行 cmd 或 powershell
 ```
 # 卸载WINDOWS自带密钥
@@ -36,7 +36,7 @@ Win10教育版KMS： NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
 Win7专业版KMS： FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4
 Win7企业版KMS： 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH
 
-#### OFFICE 激活
+### OFFICE 激活
 找到你的OFFICE目录，我的是OFFICE 2016 32位版，目录为：
 `C:\Program Files (x86)\Microsoft Office\Office16`
 进去这个目录，可以看见有个`OSPP.VBS`文件
@@ -51,5 +51,15 @@ cscript ospp.vbs /act
 ```
 **注意事项**
 OFFICE 2016在 MSDN 只有专业增强版，下载进来并安装，可以使用 [office-C2R-to-VOL](https://github.com/kkkgo/office-C2R-to-VOL) 这个工具能将 OFFICE 转为 VOL 版，然后再激活。
+
+### 其他命令
+
+```
+# 查询激活信息
+slmgr /dlv
+
+# 查看过期时间
+slmgr /xpr
+```
 
 使用系统自身批处理命令激活，因此会有后门，也不用担心病毒和信息窃取之类的。如果失败，请检查 Windows 和 OFFICE 具体版本信息。
