@@ -67,10 +67,10 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo:
-      github: git@github.com:lhp9916/lhp9916.github.io.git,master
+# deploy:
+#   type: git
+#   repo:
+#       github: git@github.com:lhp9916/lhp9916.github.io.git,master
 
 social:
   Github: https://github.com/lhp9916
