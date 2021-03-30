@@ -1,0 +1,617 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="lhp9916,liuhaipeng,刘海朋">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="每个程序员都是不折腾不舒服斯基，我也不例外，今天就来聊聊装系统。刚接触电脑的时候认为装系统是一件很难的事，有几次尝试者重装系统，结果弄得电脑开不了机，只好去电脑店，装一次就得花三十块钱，这样的事情加起来应该有三次了。但是，程序员的有一项美好品质 —— 坚持探索和尝试。后来，就学会了装系统。 下载系统镜像在这里我强力推荐 MSDN，我告诉你 ，在这里你可以下载纯净版的系统。当然，国内也有一些 GHO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装系统">
+<meta property="og:url" content="https://lhp9916.github.io/install-os/index.html">
+<meta property="og:site_name" content="lhp&#39;s Corner">
+<meta property="og:description" content="每个程序员都是不折腾不舒服斯基，我也不例外，今天就来聊聊装系统。刚接触电脑的时候认为装系统是一件很难的事，有几次尝试者重装系统，结果弄得电脑开不了机，只好去电脑店，装一次就得花三十块钱，这样的事情加起来应该有三次了。但是，程序员的有一项美好品质 —— 坚持探索和尝试。后来，就学会了装系统。 下载系统镜像在这里我强力推荐 MSDN，我告诉你 ，在这里你可以下载纯净版的系统。当然，国内也有一些 GHO">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-30T08:05:24.895Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装系统">
+<meta name="twitter:description" content="每个程序员都是不折腾不舒服斯基，我也不例外，今天就来聊聊装系统。刚接触电脑的时候认为装系统是一件很难的事，有几次尝试者重装系统，结果弄得电脑开不了机，只好去电脑店，装一次就得花三十块钱，这样的事情加起来应该有三次了。但是，程序员的有一项美好品质 —— 坚持探索和尝试。后来，就学会了装系统。 下载系统镜像在这里我强力推荐 MSDN，我告诉你 ，在这里你可以下载纯净版的系统。当然，国内也有一些 GHO">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://lhp9916.github.io/install-os/">
+
+
+  <title> 安装系统 | lhp's Corner </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lhp's Corner</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                安装系统
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-17T13:48:26+00:00" content="2017-03-17">
+              2017-03-17
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术分享/" itemprop="url" rel="index">
+                    <span itemprop="name">技术分享</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>每个程序员都是不折腾不舒服斯基，我也不例外，今天就来聊聊装系统。<br>刚接触电脑的时候认为装系统是一件很难的事，有几次尝试者重装系统，结果弄得电脑开不了机，只好去电脑店，装一次就得花三十块钱，这样的事情加起来应该有三次了。但是，程序员的有一项美好品质 —— 坚持探索和尝试。后来，就学会了装系统。</p>
+<h3 id="下载系统镜像"><a href="#下载系统镜像" class="headerlink" title="下载系统镜像"></a>下载系统镜像</h3><p>在这里我强力推荐 <a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">MSDN，我告诉你</a> ，在这里你可以下载纯净版的系统。当然，国内也有一些 GHOST 系统，如深度技术、雨林木风等，大家可以去 <a href="http://www.xitongzhijia.net/" target="_blank" rel="noopener">系统之家官网</a> 下载。</p>
+<h3 id="三种安装方式"><a href="#三种安装方式" class="headerlink" title="三种安装方式"></a>三种安装方式</h3><p>装系统一般有三种方式：光盘安装、硬盘安装、U盘安装。从字面上就可以看出，前面代表的的开机时系统是从哪里启动的。</p>
+<p>现在绝大多数电脑已经取消了光驱，系统光盘也比较少见了，所以此方式不推荐。硬盘安装也许是最简单的安装方式，下载好系统 ISO 镜像，解压后点击 setup.exe 进行安装。但是很多时候正是因为系统出现问题无法启动才需要重装，这种情况下硬盘安装就不适用了，而且硬盘安装方式会曾在大量的旧系统残留，也不是很推荐。</p>
+<p>最万能的方式就是U盘安装。U盘安装也有两种方式，一种是下载好 MSDN 镜像文件，然后用 <a href="http://rj.baidu.com/soft/detail/11522.html" target="_blank" rel="noopener">软碟通</a> (这是一款收费软件，但是可以免费试用)打开，写入硬盘镜像到U盘，然后从U盘启动进行安装。缺点是，系统安装完成后激活、打补丁、装驱动需要花很长时间，但这是我最推荐的方式，这种方式适用于安装 Linux 系统(亲测)。还有另外一种方式，就是安装PE系统到U盘，然后从U盘启动PE系统，还原 GHOST 系统，这种方式简单高效。这里给大家强力推荐 <a href="http://www.wepe.com.cn/" target="_blank" rel="noopener">微PE工具箱</a>，这是我用过最好最纯净的PE系统，没有任何捆绑，如果想支持一下作者，可以去购买作者制作好的启动U盘。PE系统最大的好处就是系统无法启动时，可以通过PE系统完全访问磁盘，拷贝重要文件。</p>
+<p>好了，其实我并没有说具体安装系统的步骤，因为我觉得网上的教程、资料已经很多了，只要你肯学就一定能学会。如果有疑问，欢迎给我来信 <a href="mailto:lhp9916@gmail.com" target="_blank" rel="noopener">lhp9916@gmail.com</a>，我的微博上也会经常分享一些非常好用的良心软件，欢迎<a href="http://weibo.com/lhp9916" target="_blank" rel="noopener">关注</a>。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/install-redis/" rel="next" title="redis 安装">
+                <i class="fa fa-chevron-left"></i> redis 安装
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/vsc/" rel="prev" title="Visual Studio Code 上手">
+                Visual Studio Code 上手 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/10591282?v=3&s=466" alt="刘海朋">
+          <p class="site-author-name" itemprop="name">刘海朋</p>
+          <p class="site-description motion-element" itemprop="description">Stay hungry, Stay foolish.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lhp9916" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/lhp9916" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载系统镜像"><span class="nav-number">1.</span> <span class="nav-text">下载系统镜像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种安装方式"><span class="nav-number">2.</span> <span class="nav-text">三种安装方式</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘海朋</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

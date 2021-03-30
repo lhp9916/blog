@@ -1,0 +1,621 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="lhp9916,liuhaipeng,刘海朋">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="初始化安装做web开发的一定都用过虚拟机，以前安装一套新系统要去Ubuntu官网下载一个镜像文件，然后新建一个vitualbox虚拟机，然后需要有人值守的去完成整个系统安装过程，很是繁琐。但用了 Vagrant 以后这个过程变成无人值守的了，意思就是一个命令搞定一切。过程是这样： 首先，保证我的系统上有两个基础软件，一个是 vagrant 一个就是 virtualbox ，安装过程就是双击然后下一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vagrant使用">
+<meta property="og:url" content="https://lhp9916.github.io/use-vagrant/index.html">
+<meta property="og:site_name" content="lhp&#39;s Corner">
+<meta property="og:description" content="初始化安装做web开发的一定都用过虚拟机，以前安装一套新系统要去Ubuntu官网下载一个镜像文件，然后新建一个vitualbox虚拟机，然后需要有人值守的去完成整个系统安装过程，很是繁琐。但用了 Vagrant 以后这个过程变成无人值守的了，意思就是一个命令搞定一切。过程是这样： 首先，保证我的系统上有两个基础软件，一个是 vagrant 一个就是 virtualbox ，安装过程就是双击然后下一">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-30T08:05:24.891Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vagrant使用">
+<meta name="twitter:description" content="初始化安装做web开发的一定都用过虚拟机，以前安装一套新系统要去Ubuntu官网下载一个镜像文件，然后新建一个vitualbox虚拟机，然后需要有人值守的去完成整个系统安装过程，很是繁琐。但用了 Vagrant 以后这个过程变成无人值守的了，意思就是一个命令搞定一切。过程是这样： 首先，保证我的系统上有两个基础软件，一个是 vagrant 一个就是 virtualbox ，安装过程就是双击然后下一">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://lhp9916.github.io/use-vagrant/">
+
+
+  <title> Vagrant使用 | lhp's Corner </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lhp's Corner</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Vagrant使用
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-01T16:38:20+00:00" content="2016-10-02">
+              2016-10-02
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术分享/" itemprop="url" rel="index">
+                    <span itemprop="name">技术分享</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="初始化安装"><a href="#初始化安装" class="headerlink" title="初始化安装"></a>初始化安装</h3><p>做web开发的一定都用过虚拟机，以前安装一套新系统要去Ubuntu官网下载一个镜像文件，然后新建一个vitualbox虚拟机，然后需要有人值守的去完成整个系统安装过程，很是繁琐。但用了 Vagrant 以后这个过程变成无人值守的了，意思就是一个命令搞定一切。过程是这样：</p>
+<p>首先，保证我的系统上有两个基础软件，一个是 vagrant 一个就是 virtualbox ，安装过程就是双击然后下一步下一步而已，没啥好说的。装好之后，到命令行中就有 vagrant 这个命令了。那么这个时候是不是就要去下载系统光盘了呢？ NO，有一个网站叫做<a href="https://vagrantcloud.com/" target="_blank" rel="noopener">https://vagrantcloud.com/</a> ，到上面搜一下 ubuntu，排名第一的这个 ubuntu / trusty64 就是 ubuntu 公司提供的 ubuntu 14.04 的64位系统镜像文件。<a id="more"></a><br>新建一个目录，执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vagrant init</span><br><span class="line">mkdir myproject</span><br><span class="line">cd myproject</span><br><span class="line">vagrant init ubuntu/trusty64</span><br></pre></td></tr></table></figure></p>
+<p>这样目录中就会多出一个文件叫 Vagrantfile 所有的机关也就都在这里了，继续执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vagrant up</span><br></pre></td></tr></table></figure></p>
+<p>就会到 vagrant cloud 网站上下载 box 进行安装了。如果是第一次下载，可以需要等十来分钟，所以一般我是早上起来干这个活，网速比较快。但是，现在的情况是我之前以经在另外一个项目中执行过这个操作了，那么也就是这个box已经存在我本地机器上了。这时候，vagrant导入这个box进来，只需要几秒钟就可以在创建出一个新的virtualbox虚拟系统了，vagrant的基本思路是为每一个项目创建自己的一个虚拟机。而且这个系统和之前的系统是完全隔离的。如果我过一段时间不需要这台虚拟机了，执行 vagrant destroy 就都清理干净了，而且其他同样使用这个 box 虚拟机也不会受到影响。<br>打开 virtuabox的图形界面可以看到又多了一个虚拟机，也可以去修改配置，比如默认内存大小是 512，我一般用 2048 。Vigrant 有一个好处是所有一切都在命令行和配置文件中搞定，这样比图形界面用起来方便的多，所以一般是不需要启动 virtualbox 图形界面的。</p>
+<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>就拿修改内存为例子。打开 Vagrantfile 添加<br>config.vm.provider “virtualbox”do |v|<br>  v.memory = 2048<br>end<br>这样运行 vagrant reload 就修改成功了。</p>
+<p><strong>创建新用户</strong><br>vagrant ssh 登陆进来的用户名是 vagrant，这个用户挺好，执行 sudo 是不需要输入密码的，开发中实际使用挺好用的。不过如果我非要创建自己的用户也是可以的。<br>sudo adduser lhp –ingroup sudo<br>如何用这个用户的身份来登录呢？运行 vagrant up 的时候，可以看到有输出<br>==&gt; default: Forwarding ports…<br>default: 22 =&gt; 2222 (adapter 1)<br>所以登录命令可以这样：<br>ssh <a href="mailto:lhp@127.0.0.1" target="_blank" rel="noopener">lhp@127.0.0.1</a> -p 2222<br>输入密码就可以登录成功了。</p>
+<p><strong>设置 IP</strong><br>添加config.vm.network “public_network”, ip: “192.168.3.100”<br>以后可以浏览器中用 192.168.3.100 来访问里面的网站了。</p>
+<p><strong>共享文件夹</strong><br>默认情况下，Vagrantfile 所在的这个文件夹，会自动对应虚拟机里面的 /vagrant 这个目录。这个意味着我不需要在虚拟机里面配置 sublimeText vim git 搜狗输入法 这些工具了，Mac/windows依旧是我写代码的环境。ubuntu 虚拟机是项目的安装运行环境。这个分工是太合理了！<br>通常的做法，项目源码就放在 myproject 目录下，把 Vagrantfile 和源码一起用 git 统一控制。然后再把apache/nginx的工作目录设置为/vagrant ,这样我们修改的文件就会实时同步到/vagrant 这个目录下，通过设置的IP来访问。</p>
+<h3 id="vagant-常用命令"><a href="#vagant-常用命令" class="headerlink" title="vagant 常用命令"></a>vagant 常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vagrant init #初始化box的操作</span><br><span class="line">vagrant up	#启动虚拟机的操作</span><br><span class="line">vagrant halt #关闭当前虚拟机</span><br><span class="line">vagrant relaod #重新启动虚拟机，主要用于重新载入配置文件</span><br><span class="line">vagrant destroy #停止当前正在运行的虚拟机并销毁所有创建的资源</span><br></pre></td></tr></table></figure>
+<p>vagrant box管理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vagrant box list</span><br><span class="line">vagrant box add</span><br><span class="line">vagrant box remove</span><br><span class="line">vagrant box update</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/layer/" rel="next" title="layer——优雅的web弹层组件">
+                <i class="fa fa-chevron-left"></i> layer——优雅的web弹层组件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/try-hard/" rel="prev" title="努力一点">
+                努力一点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/10591282?v=3&s=466" alt="刘海朋">
+          <p class="site-author-name" itemprop="name">刘海朋</p>
+          <p class="site-description motion-element" itemprop="description">Stay hungry, Stay foolish.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lhp9916" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/lhp9916" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化安装"><span class="nav-number">1.</span> <span class="nav-text">初始化安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本配置"><span class="nav-number">2.</span> <span class="nav-text">基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vagant-常用命令"><span class="nav-number">3.</span> <span class="nav-text">vagant 常用命令</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘海朋</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

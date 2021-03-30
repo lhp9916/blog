@@ -1,0 +1,620 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="lhp9916,liuhaipeng,刘海朋">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="先说一件小事，前天在微博上看到JellyBool转发的一条微博，一个在校生说感觉PHP对于以后找工作没什么优势，想转Java、前端，很迷茫。这几天我想了很多，也上知乎看了很多相关话题的讨论，有点想法。当然，我这里并非想挑起语言之间的战争，我觉得每门语言的出现，自有他存在的道理和可用的空间。 2016，异常火爆的大前端前段时间 GitHub 发布了一年一度的开源报告，2016年最受欢迎的编程语言是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="技术人的追求">
+<meta property="og:url" content="https://lhp9916.github.io/programmer-pursuit/index.html">
+<meta property="og:site_name" content="lhp&#39;s Corner">
+<meta property="og:description" content="先说一件小事，前天在微博上看到JellyBool转发的一条微博，一个在校生说感觉PHP对于以后找工作没什么优势，想转Java、前端，很迷茫。这几天我想了很多，也上知乎看了很多相关话题的讨论，有点想法。当然，我这里并非想挑起语言之间的战争，我觉得每门语言的出现，自有他存在的道理和可用的空间。 2016，异常火爆的大前端前段时间 GitHub 发布了一年一度的开源报告，2016年最受欢迎的编程语言是">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-03-30T08:05:24.891Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="技术人的追求">
+<meta name="twitter:description" content="先说一件小事，前天在微博上看到JellyBool转发的一条微博，一个在校生说感觉PHP对于以后找工作没什么优势，想转Java、前端，很迷茫。这几天我想了很多，也上知乎看了很多相关话题的讨论，有点想法。当然，我这里并非想挑起语言之间的战争，我觉得每门语言的出现，自有他存在的道理和可用的空间。 2016，异常火爆的大前端前段时间 GitHub 发布了一年一度的开源报告，2016年最受欢迎的编程语言是">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://lhp9916.github.io/programmer-pursuit/">
+
+
+  <title> 技术人的追求 | lhp's Corner </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">lhp's Corner</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                技术人的追求
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-19T12:21:49+00:00" content="2016-11-19">
+              2016-11-19
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/观点与感想/" itemprop="url" rel="index">
+                    <span itemprop="name">观点与感想</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>先说一件小事，前天在微博上看到JellyBool转发的一条微博，一个在校生说感觉PHP对于以后找工作没什么优势，想转Java、前端，很迷茫。这几天我想了很多，也上知乎看了很多相关话题的讨论，有点想法。当然，我这里并非想挑起语言之间的战争，我觉得每门语言的出现，自有他存在的道理和可用的空间。</p>
+<h3 id="2016，异常火爆的大前端"><a href="#2016，异常火爆的大前端" class="headerlink" title="2016，异常火爆的大前端"></a>2016，异常火爆的大前端</h3><p>前段时间 GitHub 发布了一年一度的开源报告，2016年最受欢迎的编程语言是 JavaScript。我想有几方面的原因吧，一是本来 GitHub 上早期的一些开源项目都是 web 前端相关的，二是随着移动端各种跨平台框架的需求，js 被予以重任，如 React Native、weex 等，网上有句话说“一切可以用 JavaScript 写的程序，最终都会被 JavaScript 改写”，三是 js 领域各种框架层出不穷，如 vue.js、angular.js、react.js 等，所以 JavaScript 排名第一并不是很意外。所以有对 web 前端感兴趣的同学，js 是必备技能，而事实上国内需求目前对有经验的 web 前端工程师确实很缺乏，很多时候钱多活少都招不到人。我有一些同学刚毕业做前端薪资待遇非常高。<br><a id="more"></a><br>阮一峰老师就说了：</p>
+<blockquote>
+<p>前端变化有多快？两年前，大家都用 Grunt 构建，去年用 Gulp + Browserify 构建，今年用 Webpack 构建，明年可能会使用纯 ES6 的构建工具。每变一次，前面的那些工具就全没用，都白学。要知道，这些工具每一个都是软件系统，单单 Grunt 就有 4 千个插件，然而全没用了。</p>
+</blockquote>
+<p>对于我来说，要做一个UI界面精美、用户体验良好的Web App 难度还是挺大，相比之下，我更倾向做后台，专注于业务逻辑和数据处理。前端技术更新速度实在太快，太累，纠结，学的也不比后端少。</p>
+<h3 id="岗位分工"><a href="#岗位分工" class="headerlink" title="岗位分工"></a>岗位分工</h3><p>对于项目而言，为了更好的开发协作效率，从岗位职责上划分为“后端”、“前端”、“设计”等工种，对于企业而言是非常有必要的，但对于开发者个人而言，其实没有必要刻意地将自己限制在某个领域，而不去了解或尝试其他领域的事情。</p>
+<h3 id="微软生态-VS-Linux-开源世界"><a href="#微软生态-VS-Linux-开源世界" class="headerlink" title="微软生态 VS Linux 开源世界"></a>微软生态 VS Linux 开源世界</h3><p>我毫不掩饰对 Linux 和 PHP 的喜爱。<br>如果只在微软的世界遨游，而不知道外面的世界，其实是件幸福的事情。微软的成功，是支持商业的技术的成功。微软的杀手锏，不是为了技术而技术，而是为了“生产力”，为了用户的商业成功而追求技术。Linux 的世界是程序员的世界，是对计算机技术充满爱好的geek的世界，也是一批数量很小、但是影响很大的互联网公司的世界。能够轻松在几十台服务器上分布web服务，能够拥有海量的开源工具来用，能够在“毫秒”和“万亿比特”之间游刃有余，Linux 能更加轻松地做到。<br>我同意微软是一家伟大的公司，但我比较偏执，我会把自己的未来都赌在 Linux 和自由软件上面。</p>
+<h3 id="最后，总结"><a href="#最后，总结" class="headerlink" title="最后，总结"></a>最后，总结</h3><p>你必须明白，计算机行业没有一种技术是可以吃一辈子的，所以我们要不断学习来强大自己，并关注行业里的最新动态。<br>最后，编程语言是互通的，学会一门语言再学习另一门技术会比较容易，所以重要的是你必须要先掌握一门技能，假如未来真的受到冲击，不用任何人提醒，你自己会第一时间去变通并且适应，相信我，这是人的本能。而很多时候兴趣才是决定你能走多远的决定因素，如果你的工作能是你的兴趣所在，这难道不是每个人最期待的工作么？</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/pass-the-driver-license/" rel="next" title="驾照考完了">
+                <i class="fa fa-chevron-left"></i> 驾照考完了
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/how-to-become-a-master/" rel="prev" title="怎样才能成为高手？">
+                怎样才能成为高手？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/10591282?v=3&s=466" alt="刘海朋">
+          <p class="site-author-name" itemprop="name">刘海朋</p>
+          <p class="site-description motion-element" itemprop="description">Stay hungry, Stay foolish.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">52</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lhp9916" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/lhp9916" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2016，异常火爆的大前端"><span class="nav-number">1.</span> <span class="nav-text">2016，异常火爆的大前端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#岗位分工"><span class="nav-number">2.</span> <span class="nav-text">岗位分工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微软生态-VS-Linux-开源世界"><span class="nav-number">3.</span> <span class="nav-text">微软生态 VS Linux 开源世界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后，总结"><span class="nav-number">4.</span> <span class="nav-text">最后，总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘海朋</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
