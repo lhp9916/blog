@@ -5,7 +5,7 @@ tags:
 categories: 技术分享
 ---
 ### MySQL 主从同步的机制
-![](/blog/images/20170304/Master-Slave.jpg)
+![](/images/20170304/Master-Slave.jpg)
 MySQL 主从同步是在MySQL主从复制(Master-Slave Replication)基础上实现的，通过设置在Master MySQL上的binlog(使其处于打开状态)，Slave MySQL上通过一个I/O线程从Master MySQL上读取binlog，然后传输到Slave MySQL的中继日志中，然后Slave MySQL的SQL线程从中继日志中读取中继日志，然后应用到Slave MySQL的数据库中。这样实现了主从数据同步功能。
 
 ### MySQL主从同步的作用
@@ -48,7 +48,7 @@ mysql>flush privileges;
 ```
 mysql> show master status;
 ```
-![](/blog/images/20170304/master-status.jpg)
+![](/images/20170304/master-status.jpg)
 注：执行完这个步骤后不要再操作主数据库了，防止主数据库状态值变化。
 
 ### mysql从服务器配置(slave)
@@ -69,7 +69,7 @@ mysql>start slave;
 ```
 mysql> SHOW SLAVE STATUS\G;
 ```
-![](/blog/images/20170304/slave-status.jpg)
+![](/images/20170304/slave-status.jpg)
 注：Slave_IO_Running及Slave_SQL_Running进程必须正常运行，即YES状态，否则说明同步失败。
 
 停止同步：
